@@ -49,7 +49,8 @@ export async function buyItem(id) {
   const response = await client
     .from('shopping_list_items')
     .update({ has_been_bought: true })
-    .match({ id });
+    .match({ id })
+    .single();
   
   return checkError(response);    
 }

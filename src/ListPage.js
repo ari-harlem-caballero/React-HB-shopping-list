@@ -33,9 +33,8 @@ export default function ListPage() {
       <div className='item-list'>
         {/* map through all the list items and render them here */}
         {
-          listItems.map(listItem => <ListItem
-            key={listItem.id}
-            fetchItems={fetchItems}
+          listItems.map((listItem, i) => <ListItem
+            key={listItem.id + i}
             listItem={listItem} />
           )
         }
