@@ -6,7 +6,7 @@ export default function ListItem({ fetchItems, listItem }) {
     // buy the item (in supabase)
     await buyItem(listItem.id);
     // refetch the updated items array by calling the function passed in through props
-    await fetchItems();
+    fetchItems();
   }
 
 //  () => {} is javascript for "do nothing". It's an arrow function that doesn't nothing at all.
